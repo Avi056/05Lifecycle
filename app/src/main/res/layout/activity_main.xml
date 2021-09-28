@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guide2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guide3"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guide4"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lifetime"
+        android:text="Lifetime:"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/guide2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/lonCreate"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guide3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onCreate: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lonStart"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lonCreate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onStart: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lonResume"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lonStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onResume: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lonPause"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lonResume"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onPause: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lonStop"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lonPause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onStop: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lonRestart"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lonStop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onRestart: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lonDestroy"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lonRestart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guide"
+        android:text="onDestroy: "
+        android:textColor="@color/white"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#939"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/guide4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Reset"
+        android:onClick="reset"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/crun"
+        android:text="Current Run:"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/guide2"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/conCreate"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guide3"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onCreate: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/conStart"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/conCreate"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onStart: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/conResume"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/conStart"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onResume: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/conPause"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/conResume"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onPause: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/conStop"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/conPause"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onStop: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/conRestart"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/conStop"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onRestart: "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/conDestroy"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/conRestart"
+        app:layout_constraintLeft_toLeftOf="@+id/guide"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="onDestroy: "
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
